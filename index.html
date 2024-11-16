@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <script src="all.min.js"></script>
+    <script src="moment.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-section">
+            <div class="search-bar">
+                <i class="fa-brands fa-searchengin search-icon"></i>
+                <input type="text" name="search-city" id="search-input" placeholder="Tìm kiếm thành phố...">
+            </div>
+            <div class="info-wrapper">
+				<p class="current-date"></p> 
+                <p class="city-name">TP. Hồ Chí Minh</p>
+                <p class="weather-state">mưa nhẹ</p>
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="weather-icon">
+                <p class="temperature">26</p>
+            </div>
+            <div class="weather-alert" id="weather-alert"></div>
+        </div>
+
+        <div class="additional-section">
+            <div class="row">
+                <div class="item">
+                    <div class="label">MT Mọc</div>
+                    <div class="value sunrise">6:00</div>
+                </div>
+                <div class="item">
+                    <div class="label">MT Lặn</div>
+                    <div class="value sunset">18:00</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <div class="label">Độ ẩm</div>
+                    <div class="value"><span class="humidity">73</span>%</div>
+                </div>
+                <div class="item">
+                    <div class="label">Gió</div>
+                    <div class="value"><span class="wind-speed">7.52</span> km/h</div>
+                </div>
+            </div>
+        </div>
+		
+        <!-- Dự báo theo giờ -->
+        <div class="forecast-section">
+            <div class="hourly-forecast" id="hourly-forecast-container">
+                <h3>Dự báo theo giờ</h3>
+                <div class="hourly-forecast-items">
+                    <!-- Các dự báo theo giờ sẽ được chèn vào đây -->
+                </div>
+            </div>
+
+            <!-- Dự báo theo ngày -->
+            <div class="daily-forecast">
+                <h3>Dự báo theo ngày</h3>
+                <div class="daily-forecast-items">
+                    <!-- Các dự báo theo ngày sẽ được chèn vào đây -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
